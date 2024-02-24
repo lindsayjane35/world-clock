@@ -1,3 +1,15 @@
-h1 {
-  color: purple;
+body {
+  color: rgb(167, 111, 167);
+  background-color: rgb(25, 13, 27);
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a {
+  color: rgb(167, 111, 167);
+  text-decoration: none;
+  font-weight: 700;
+}
+a:hover {
+  color: rgb(218, 197, 218);
 }
