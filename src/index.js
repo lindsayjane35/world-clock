@@ -3,13 +3,15 @@ function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
   if (losAngelesElement) {
     let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let lostAngelesTimeElement = losAngelesElement.querySelector(".time");
+    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
     let losAngelesTime = moment().tz("America/Los_Angeles");
 
     losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM	Do YYYY");
-    lostAngelesTimeElement.innerHTML = losAngelesTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
+    losAngelesTimeElement.innerHTML = `
+    <div class="time">${losAngelesTime.format(
+      "h:mm:ss"
+    )} <span class="ampm">${losAngelesTime.format("A")}</span></div>
+    `;
   }
   //New York
   let newYorkElement = document.querySelector("#new-york");
@@ -19,9 +21,26 @@ function updateTime() {
     let newYorkTime = moment().tz("America/New_York");
 
     newYorkDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    newYorkTimeElement.innerHTML = newYorkTime.format(
-      "h:mm:ss [<small>]A[</small>]"
-    );
+    newYorkTimeElement.innerHTML = `
+    <div class="time">${newYorkTime.format(
+      "h:mm:ss"
+    )} <span class="ampm">${newYorkTime.format("A")}</span></div>
+    `;
+  }
+
+  //Copenhagen
+  let copenhagenElement = document.querySelector("#copenhagen");
+  if (copenhagenElement) {
+    let copenhagenDateElement = copenhagenElement.querySelector(".date");
+    let copenhagenTimeElement = copenhagenElement.querySelector(".time");
+    let copenhagenTime = moment().tz("Europe/Copenhagen");
+
+    copenhagenDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    copenhagenTimeElement.innerHTML = `
+    <div class="time">${copenhagenTime.format(
+      "h:mm:ss"
+    )} <span class="ampm">${copenhagenTime.format("A")}</span></div>
+    `;
   }
 }
 function updateCity(event) {
@@ -38,9 +57,9 @@ function updateCity(event) {
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
-    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-    "A"
-  )}</small></div>
+    <div class="time">${cityTime.format(
+      "h:mm:ss"
+    )} <span class="ampm">${cityTime.format("A")}</span></div>
   </div>
   <a href="/" class="reset"><em>RESET</em></a>
   `;
