@@ -11,7 +11,7 @@ body {
   background-color: rgb(232, 224, 233);
   border-radius: 10px;
   color: rgb(25, 13, 27);
-  padding: 10px 25px 10px 25px;
+  padding: 10px 25px 20px 25px;
   max-width: 500px;
 }
 select {
@@ -44,6 +44,24 @@ h2 {
   font-weight: 700;
   font-size: 25px;
 }
+.reset {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 10px;
+  width: 110px;
+  border-radius: 30px;
+  background-color: rgb(25, 13, 27);
+  color: white;
+  text-decoration: none;
+}
+.reset:hover {
+  color: rgb(25, 13, 27);
+  background-color: white;
+  font-weight: 700;
+}
 footer {
   color: rgb(165, 163, 165);
   font-size: 14px;
@@ -51,8 +69,8 @@ footer {
 }
 a {
   color: rgb(192 190 193);
-  text-decoration: none;
   font-weight: 700;
+  text-decoration: none;
 }
 a:hover {
   color: rgb(249 241 253);

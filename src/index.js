@@ -42,6 +42,7 @@ function updateCity(event) {
     "A"
   )}</small></div>
   </div>
+  <a href="/" class="reset"><em>RESET</em></a>
   `;
 }
 
